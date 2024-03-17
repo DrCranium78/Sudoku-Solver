@@ -505,7 +505,7 @@ uint16_t has_loose_cell(uint8_t *s)
 			colors |= (mask & 0x8000 && s[index] != 0) << s[index];
 			mask <<= 1;
 		}		
-		if (count_bits(colors) == 3) return masks[i];						//  i is the index of the mask used to uncover the loose cell
+		if (count_bits(colors) == 3) return masks[i];				//  i is the index of the mask used to uncover the loose cell
 	}
 	return NOT_EXCLUSIVE;
 }
@@ -583,7 +583,7 @@ PICK_VERTEX:
 		if (v -> _count != 0)
 		{
 			cell = vertex_to_cell_index(v);
-			if (cell == NOT_EXCLUSIVE) goto PICK_VERTEX;				//  try next vertex
+			if (cell == NOT_EXCLUSIVE) goto PICK_VERTEX;			//  try next vertex
 			
 			color = v -> _color;			
 		}
@@ -602,7 +602,7 @@ PICK_VERTEX:
 		v = NULL;
 	}
 	
-	return OK;												//  unreachable
+	return OK;									//  unreachable
 }
 
 
